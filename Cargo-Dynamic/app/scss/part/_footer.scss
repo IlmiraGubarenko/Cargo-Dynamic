@@ -1,0 +1,96 @@
+@import "../vars";
+@import "../fonts";
+
+/*** footer style ***/
+.footer {
+    padding: 25px 0;
+    background-color: $blue-dark;
+    color: $white;
+}
+
+.footer-blocks {
+    display: flex;    
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 60px;  
+
+    @media screen and (max-width: 767px) {
+        padding-bottom: 20px; 
+    }
+    
+    &__item:first-child {
+        padding-right: 118px;
+
+        @media screen and (max-width: 1023px) {
+            padding-right: 0;
+        }
+    }
+
+    &__item {
+        margin-top: 25px;
+
+        @media screen and (max-width: 767px) {
+            max-width: 95%;
+            width: 100%;
+            margin: 0 auto 25px;
+        }
+    }
+}
+
+.footer-list {
+    padding-top: 20px;
+
+    &__item {   
+        position: relative;     
+        max-width: 300px;
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 18px;        
+        line-height: 27px;
+
+        @media screen and (max-width: 1023px) {
+            font-size: 15px;
+        }       
+
+        &::before {
+            content:'';
+            position: absolute;
+            top: 4px;
+            left: 0;
+        }
+    }
+
+    .footer-phone {  
+        padding-left: 44px;
+
+        &::before {            
+            background: url(../img/ic-phone.svg);
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    .footer-email {  
+        padding-left: 44px;     
+
+        &::before {           
+            background: url(../img/ic-email.svg);
+            width: 24px;
+            height: 17px;
+        }
+    }
+
+    .footer-adress { 
+        padding-left: 44px;     
+
+        &::before {   
+            background: url(../img/ic-adress.svg);
+            width: 14px;
+            height: 24px;
+        }
+    }
+}
+
+.footer-bottom {
+    text-align: center;
+}

@@ -1,0 +1,195 @@
+@import "reset";
+@import "vars";
+@import "fonts";
+@import "part/global";
+@import "part/section-top";
+@import "part/section-nav";
+@import "part/footer";
+
+
+/*** header style ***/
+.header {
+    position: relative;
+    padding: 170px 15px;
+    background: url(../img/photo_2.png) center no-repeat;
+    background-size: cover;
+    color: $white;  
+    
+    @media screen and (max-width: 600px) {
+       padding: 60px 15px;
+    }
+
+    &__dark {        
+        position: absolute;
+        background: #000000;
+        opacity: 0.3;  
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    .title-h1 {
+        position: relative;        
+        z-index: 1;        
+    }
+}
+
+/*** section-about style ***/
+.section-about {
+    padding: 150px 0 75px;    
+
+    @media screen and (max-width: 1023px) {
+        padding: 25px 0;
+    }
+
+    .block-info {        
+
+        &__txt { 
+            max-width: 520px;  
+            padding-left: 50px; 
+            padding-right: 15px;     
+            
+            @media screen and (max-width: 767px) {
+                max-width: 95%;  
+                padding: 25px 0 0; 
+                text-align: center;  
+            }
+        }    
+        
+        &__img {   
+            @media screen and (max-width: 767px) {
+                display: none;  
+            }
+        }      
+    }   
+}
+
+
+/*** section-international style ***/
+.section-international {
+    padding: 65px 0;
+
+    @media screen and (max-width: 1023px) {
+        padding: 25px 0;
+    }
+
+    .title-h1 {
+        max-width: 619px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 50px;
+        line-height: 1;
+
+        @media screen and (max-width: 767px) {
+            padding-bottom: 10px;
+        }
+    }
+
+    .block-info { 
+        justify-content: flex-end;       
+
+        &__txt { 
+            max-width: 585px;  
+            padding-right: 50px; 
+            padding-left: 15px;   
+
+            @media screen and (max-width: 767px) {
+                max-width: 95%;  
+                padding: 25px 0 0; 
+                text-align: center;                  
+            }
+        } 
+        
+        &__img {   
+            @media screen and (max-width: 767px) {
+                display: none;  
+            }
+        } 
+    }   
+}
+
+
+/*** section-multimodal style ***/
+.section-multimodal {
+    padding: 85px 0 150px;
+
+    @media screen and (max-width: 1023px) {
+        padding: 25px 0 50px;
+    }
+
+    .title-h1 {
+        max-width: 570px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 50px;
+        line-height: 1;
+
+        @media screen and (max-width: 767px) {
+            padding-bottom: 10px;
+        }
+    }
+
+    .block-info {              
+
+        &__txt { 
+            max-width: 570px;  
+            padding-left: 50px; 
+            padding-right: 15px;  
+            
+            @media screen and (max-width: 767px) {
+                max-width: 95%;  
+                padding: 25px 0 0; 
+                text-align: center;                
+            }
+        } 
+
+        &__img {   
+            @media screen and (max-width: 767px) {
+                display: none;  
+            }
+        } 
+        
+        .strong-txt {
+            font-weight: 700;
+            padding-top: 10px;
+        }
+    }   
+}
+
+
+/*** section-info__blue style ***/
+.section-info__blue {
+    padding: 50px 0 0; 
+    background-color: $blue;
+    color: $white;
+
+    .title-h2 {
+        color: $white
+    }    
+}
+
+
+/*** section-form style ***/
+.section-form {
+    padding: 50px 0 100px;
+    background: url(../img/photo_3.png) center no-repeat;
+    background-size: cover;
+
+    @media screen and (max-width: 1023px) {
+        padding: 50px 0;
+    }    
+
+    .btn-form {
+        max-width: 230px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .block-info {
+        flex-wrap: nowrap;
+    }
+}

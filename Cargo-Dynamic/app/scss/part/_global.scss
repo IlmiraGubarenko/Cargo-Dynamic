@@ -1,0 +1,408 @@
+@import "../vars";
+@import "../fonts";
+
+/*** global style ***/
+body {
+    position: relative;
+    font: 400 16px/1.2 'GothamPro', sans-serif;    
+    background-color: $white;
+    color: $black; 
+    letter-spacing: 0;   
+}
+
+a {
+    position: relative;
+    color: $white;
+
+    &::before {        
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        background-color: $white;
+        height: 1px;
+        width: 0;
+        transition: width 0.3s ease-in-out;
+    }
+
+    &:hover {
+        &::before {
+            width: 50%;
+        }
+    } 
+}
+
+.container-lg {  
+    max-width: 1450px;
+    width: 100%;  
+    margin: 0 auto; 
+}
+
+.container {
+    max-width: 970px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.scroll-hidden {
+    overflow-y: hidden;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-none {
+    display: none;
+}
+
+.title-h1 {    
+    font: 900 50px/1.2 'GothamProBlack', sans-serif; 
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 1200px) {
+        font-size: 40px;
+    }
+
+    @media screen and (max-width: 1023px) {
+        font-size: 35px;
+    }
+
+    @media screen and (max-width: 600px) {
+        font-size: 27px; 
+    }
+
+     @media screen and (max-width: 475px) {
+        font-size: 25px; 
+    }
+}
+
+.title-h2 {    
+    font: 500 24px/1.2 'GothamProMedium', sans-serif; 
+    color: $blue;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 600px) {
+        font-size: 20px; 
+    }
+}
+
+.title-h3 {    
+    font: 600 20px/1 'GothamProBold', sans-serif;  
+
+    @media screen and (max-width: 600px) {
+        font-size: 18px; 
+    }
+}
+
+.btn {    
+    text-align: center;
+    font: 500 14px 'GothamProMedium', sans-serif;  
+    text-transform: uppercase;
+    border-radius: 4px; 
+}
+
+.btn-phone {    
+    padding: 15px 34px;
+    border: 2px solid $blue;
+    color: $blue;
+    background-color: $white;
+
+    &:hover {
+        color: $white;
+        background-color: $blue;
+    }
+
+    &:active {
+        color: $white;
+        background-color: #20738A;
+        border: 2px solid #20738A;
+    }
+}
+
+.form {
+    position: relative;        
+    z-index: 1;
+    max-width: 940px;
+    margin: 50px auto 0;
+    padding: 35px 60px;
+    border-radius: 10px;
+    background: $white;
+    text-align: center;
+
+    @media screen and (max-width: 600px) {
+        padding: 35px 25px;
+    }
+
+    .title-h2 {
+        padding-bottom: 37px;
+        color: #3C4253;                
+    }
+
+    .form-group {
+        padding-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (max-width: 1023px) {
+            flex-wrap: wrap;
+            padding-bottom: 5px;
+        }
+
+        &__input {
+            max-width: 255px;
+            width: 100%;
+            padding: 15px 10px;
+            border: 1px solid #5A5A5A;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #5A5A5A;
+            font: 400 16px/1.2 'GothamPro', sans-serif;
+
+            &:focus {
+                border: 1px solid #3A92AB;
+                color: $black;
+            }
+
+            @media screen and (max-width: 1023px) {
+                max-width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+
+        .input--discription {
+            max-width: 100%;
+        }
+    }
+
+    .select {
+        position: relative;
+        max-width: 255px;
+        width: 100%;
+        padding: 15px 10px;
+        border: 1px solid #5A5A5A;
+        border-radius: 4px;
+        background: url(../img/arrow.svg) 95% center no-repeat rgba(255, 255, 255, 0.9);
+        color: #5A5A5A;
+        font: 400 16px/1.2 'GothamPro', sans-serif;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+
+        &:focus, 
+        &:hover {
+            border: 1px solid #3A92AB;
+            color: $black;
+            outline: none; 
+        }  
+
+        &::-ms-expand { 
+            display: none; 
+        }   
+        
+        @media screen and (max-width: 1023px) {
+            max-width: 100%;
+            margin-bottom: 25px;
+        }
+} 
+
+    .btn-form {    
+        max-width: 280px;     
+        width: 100%;   
+        padding: 20px;    
+        margin-top: 10px;
+        border: none ;
+        color: $white;
+        background-color: $blue;
+
+        &:hover {
+            color: $white;
+            background-color: #5EB6CF;;
+        }
+
+        &:active {
+            color: $white;
+            background-color: #20738A;
+        }
+    }
+}
+
+.block-info {
+    display: flex;
+
+     @media screen and (max-width: 1023px) {       
+        flex-wrap: wrap;
+    }
+
+    &__img {
+        @media screen and (max-width: 1023px) {
+            margin: 0 auto;           
+        }
+    }
+
+    &__txt {             
+        width: 100%;                
+        font-size: 20px; 
+        line-height: 30px;  
+        letter-spacing: .5px;  
+        
+        @media screen and (max-width: 1200px) {
+            font-size: 18px;
+        }   
+
+        @media screen and (max-width: 1023px) {
+            max-width: 90%;
+            padding: 0;                
+            margin: 0 auto;
+        }           
+        
+        @media screen and (max-width: 600px) {
+            font-size: 16px;
+        }   
+    }       
+} 
+
+.info-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__item {
+        max-width: 385px;             
+        width: 100%;     
+        padding-bottom: 85px;
+        letter-spacing: .5px;
+
+        @media screen and (max-width: 1200px) {
+            max-width: 90%;             
+            margin: 0 auto;     
+            padding-bottom: 45px;
+        }
+
+        @media screen and (max-width: 600px) {              
+            padding-bottom: 30px;
+        }
+    }  
+    
+    &__txt {    
+        padding-top: 15px;         
+        font-size: 20px; 
+        line-height: 30px;    
+        
+        @media screen and (max-width: 1200px) {
+            font-size: 18px;
+        }
+
+        @media screen and (max-width: 600px) {
+            font-size: 16px;
+        }   
+    } 
+}
+
+
+// pop-up
+.modal {
+    position: fixed;
+    top: 50%;    
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    max-width: 400px;
+    width: 100%;   
+    background-color: $white; 
+    text-align: center;
+    padding: 40px 58px 58px;
+}
+
+.btn-close {
+    width: 14px;
+    height: 14px;
+    color: #000;
+    background-color: transparent;   
+    border: none;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    cursor: pointer;
+
+     &::before,  
+     &::after {
+        content: '';
+        position: absolute;
+        left: 14px;
+        height: 14px;
+        width: 2px;
+        background-color: $black;
+    }
+    
+     &::before {
+        transform: rotate(45deg);
+    }
+
+     &::after {
+        transform: rotate(-45deg);
+    }
+}
+
+.modal-title {
+   font: 500 20px/1.2 'GothamProMedium', sans-serif; 
+    color: #3C4253;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 375px) {
+        font-size: 16px;
+    } 
+}
+
+
+.modal-body {
+  padding: 20px 0;
+}
+
+.btn-modal {    
+    max-width: 280px;     
+    width: 100%;   
+    padding: 20px;    
+    margin-top: 10px;
+    border: none ;
+    color: $white;
+    background-color: $blue;
+
+    &:hover {
+        color: $white;
+        background-color: #5EB6CF;;
+    }
+
+    &:active {
+        color: $white;
+        background-color: #20738A;
+    }
+}
+
+.modal__input {
+    max-width: 280px;
+    width: 100%;
+    padding: 15px 10px;
+    margin: 10px 0;
+    border: 1px solid #5A5A5A;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #5A5A5A;
+    font: 400 16px/1.2 'GothamPro', sans-serif;
+
+    &:focus {
+        border: 1px solid #3A92AB;
+        color: $black;
+    }
+
+    @media screen and (max-width: 1023px) {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+}
