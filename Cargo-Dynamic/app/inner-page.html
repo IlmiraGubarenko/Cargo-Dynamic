@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Keywords">
+    <meta name="description" content="Description">
+
     <title>Cargo Dynamic</title>
     <link rel="stylesheet" href="css/inner-page.min.css">
 </head>
@@ -22,7 +25,7 @@
         </div>
     </section>
 
-    <section class="section-nav">
+    <nav class="section-nav">
         <div class="container">
             <ul class="nav-list">
                 <li class="nav-list__item">
@@ -47,7 +50,7 @@
                 <span></span>
             </button>
         </div>
-    </section>
+    </nav>
 
     <header class="header">        
         <h1 class="title-h1">ГРУЗОПЕРЕВОЗКИ с Cargo-Dynamic</h1>  
@@ -141,7 +144,7 @@
             </div>
             <div class="form-group">
                 <input type="text" name="" id="" class="form-group__input" placeholder="Ваше имя">
-                <input type="text" name="" id="" class="form-group__input" placeholder="Телефон">
+                <input type="tel" name="" id="" class="form-group__input" placeholder="Телефон">
                 <input type="email" name="" id="" class="form-group__input" placeholder="E-mail">
             </div>
             <div class="form-group">
@@ -200,8 +203,8 @@
         </div>
     </footer>
 
-    <!-- pop-up -->
-    <div id="openModal" class="modal d-none"> 
+    <!-- pop-up -->    
+    <div id="openModal" class="modal off-modal">         
         <button class="btn-close"></button>
         <div class="modal-title">
             <span>Введите данные и мы перезвоним вам в течение 5 минут</span>
@@ -215,6 +218,7 @@
         <button type="submit" class="btn btn-modal">Отправить</button>
     </div>
 
+    <div class="body-background off-modal"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
     <script src="js/main.js"></script>

@@ -104,6 +104,11 @@ a {
     font: 500 14px 'GothamProMedium', sans-serif;  
     text-transform: uppercase;
     border-radius: 4px; 
+    transition: all .5s;
+
+    &:hover {       
+        transition: all .5s;
+    }
 }
 
 .btn-phone {    
@@ -114,7 +119,7 @@ a {
 
     &:hover {
         color: $white;
-        background-color: $blue;
+        background-color: $blue;       
     }
 
     &:active {
@@ -163,10 +168,12 @@ a {
             background: rgba(255, 255, 255, 0.9);
             color: #5A5A5A;
             font: 400 16px/1.2 'GothamPro', sans-serif;
+            transition: all .5s;
 
             &:focus {
                 border: 1px solid #3A92AB;
                 color: $black;
+                transition: all .5s;
             }
 
             @media screen and (max-width: 1023px) {
@@ -307,16 +314,43 @@ a {
 
 // pop-up
 .modal {
+    opacity: 1;
+    visibility: visible;
     position: fixed;
     top: 50%;    
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 99;
+    z-index: 999;
     max-width: 400px;
     width: 100%;   
     background-color: $white; 
     text-align: center;
     padding: 40px 58px 58px;
+
+    transition: .7s ease-out;   
+
+    &.off-modal {
+        opacity: 0;
+        visibility: hidden;      
+    }
+}
+
+.body-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparentize(black,0.2);
+    visibility: visible;
+    opacity: 1;
+    z-index: 99;
+    transition: .7s ease-out;
+
+    &.off-modal {
+        opacity: 0;
+        visibility: hidden;      
+    }
 }
 
 .btn-close {

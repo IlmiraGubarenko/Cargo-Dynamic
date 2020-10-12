@@ -15,7 +15,8 @@
 .nav-list {
     display: flex;
     align-items: center;
-    justify-content: space-between;    
+    justify-content: space-between;   
+    transition: all .7s ease-out;
     
     &__item {
         @media screen and (max-width: 1023px) {
@@ -30,19 +31,22 @@
     }
 
     @media screen and (max-width: 1023px) {
-        display: none;
+        margin-left: -999px; 
+        position: absolute;
+        z-index: 99;
+        background-color: $blue-dark;
+        top: 49px;
+        left: 0;
+        padding: 5px 28px;
+        height: 100vh; 
+        display: block;
+        transition: all .7s ease-out;
     }
 
     &.nav-active {
         @media screen and (max-width: 1023px) {
-            display: block;
-            position: absolute;
-            z-index: 99;
-            background-color: $blue-dark;
-            top: 49px;
-            left: 0;
-            padding: 5px 30px;
-            height: 100vh; 
+            margin-left: 0; 
+            transition: all .7s ease-out;          
         }        
     }    
 }
