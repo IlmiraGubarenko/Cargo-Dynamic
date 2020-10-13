@@ -168,7 +168,7 @@ a {
             background: rgba(255, 255, 255, 0.9);
             color: #5A5A5A;
             font: 400 16px/1.2 'GothamPro', sans-serif;
-            transition: all .5s;
+            // transition: all .5s;
 
             &:focus {
                 border: 1px solid #3A92AB;
@@ -314,8 +314,8 @@ a {
 
 // pop-up
 .modal {
-    opacity: 1;
-    visibility: visible;
+    opacity: 0;
+    visibility: hidden;
     position: fixed;
     top: 50%;    
     left: 50%;
@@ -327,49 +327,50 @@ a {
     text-align: center;
     padding: 40px 58px 58px;
 
-    transition: .7s ease-out;   
+    transition: .3s ease-out;   
 
-    &.off-modal {
-        opacity: 0;
-        visibility: hidden;      
+    &.on-modal {
+        opacity: 1;
+        visibility: visible;      
     }
 }
 
 .body-background {
+    opacity: 0;
+    visibility: hidden;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: transparentize(black,0.2);
-    visibility: visible;
-    opacity: 1;
+    background-color: transparentize(black,0.2);    
     z-index: 99;
-    transition: .7s ease-out;
 
-    &.off-modal {
-        opacity: 0;
-        visibility: hidden;      
+    transition: .3s ease-out;
+
+    &.on-modal {
+        opacity: 1;
+        visibility: visible;  
     }
 }
 
 .btn-close {
-    width: 14px;
-    height: 14px;
+    width: 19px;
+    height: 19px;
     color: #000;
     background-color: transparent;   
     border: none;
     position: absolute;
-    top: 5px;
+    top: 15px;
     right: 20px;
-    cursor: pointer;
+    cursor: pointer;    
 
      &::before,  
      &::after {
         content: '';
         position: absolute;
-        left: 14px;
-        height: 14px;
+        top: 4px;
+        height: 15px;
         width: 2px;
         background-color: $black;
     }

@@ -25,13 +25,13 @@ function openPopUp() {
     let btnClose = document.querySelector('.btn-close');
 
     btnPhone.addEventListener('click', function() {              
-        openModal.classList.remove('off-modal');
-        bodyBg.classList.remove('off-modal');                           
+        openModal.classList.add('on-modal');
+        bodyBg.classList.add('on-modal');                           
     });
 
     btnClose.addEventListener('click', function() {  
-        openModal.classList.add('off-modal');
-        bodyBg.classList.add('off-modal');         
+        openModal.classList.remove('on-modal');
+        bodyBg.classList.remove('on-modal');         
     });
 }
 
