@@ -324,15 +324,21 @@ a {
     max-width: 400px;
     width: 100%;   
     background-color: $white; 
-    text-align: center;
-    padding: 40px 58px 58px;
-
+    text-align: center;  
     transition: .3s ease-out;   
 
     &.on-modal {
         opacity: 1;
         visibility: visible;      
     }
+}
+
+.modal_call {    
+    padding: 40px 58px 58px;    
+}
+
+.modal_send {    
+    padding: 50px 37px 30px;    
 }
 
 .body-background {
@@ -345,7 +351,6 @@ a {
     height: 100%;
     background-color: transparentize(black,0.2);    
     z-index: 99;
-
     transition: .3s ease-out;
 
     &.on-modal {
@@ -385,7 +390,7 @@ a {
 }
 
 .modal-title {
-   font: 500 20px/1.2 'GothamProMedium', sans-serif; 
+    font: 500 20px/1.2 'GothamProMedium', sans-serif; 
     color: #3C4253;
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -398,6 +403,17 @@ a {
 
 .modal-body {
   padding: 20px 0;
+
+  &__txt {
+    font: 400 20px/24px 'GothamPro', sans-serif;
+    max-width: 245px;
+    width: 100%;
+    margin: 0 auto; 
+
+     @media screen and (max-width: 375px) {
+        font-size: 18px;
+    } 
+  }
 }
 
 .btn-modal {    
